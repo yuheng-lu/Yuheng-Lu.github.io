@@ -1,0 +1,29 @@
+---
+const { companyLink, company, title, subtitle } = Astro.props;
+---
+
+<div class="flex">
+  <div class="education__time">
+    <span class="w-4 h-4 bg-primary block rounded-full mt-1"></span>
+    <span class="education__line bg-primary block h-full w-[2px] translate-x-[7px]"></span>
+  </div>
+  <div class="experience__data bd-grid px-5">
+    <h3 class="font-semibold mb-1">
+      <a
+        href={companyLink}
+        class="relative inline-block
+              after:absolute after:left-0 after:-bottom-0.5
+              after:h-[1px] after:w-0 after:bg-current
+              after:transition-all after:duration-200
+              hover:after:w-full"
+      >
+        {company}
+      </a>
+    </h3>
+    <div class="font-light text-sm">{title}</div>
+    <div class="font-light text-sm">{subtitle}</div>
+    <p class="my-2 text-justify">
+      <slot />
+    </p>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+---
+// Empty frontmatter as no props are needed
+---
+<script>
+    const originalTitle = document.title;
+  
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        document.title = "please come back 🙏";
+      } else {
+        document.title = originalTitle;
+      }
+    });
+</script>  
