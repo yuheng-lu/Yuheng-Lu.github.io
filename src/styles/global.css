@@ -1,3 +1,13 @@
-.time-line-container>div:last-child .education__time>.education__line {
-    display: none;
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: dracula --default;
+  logs: false;
+}
+
+@theme {
+  --font-code: "JetBrains Mono", monospace;
+}
+
+.time-line-container > div:last-child .education__time > .education__line {
+  display: none;
 }

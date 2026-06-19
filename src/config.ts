@@ -4,5 +4,4 @@
 export const SITE_TITLE = "about me";
 export const SITE_DESCRIPTION =
   "personal website of yuheng lu, software engineer and nyu courant alum";
-export const GENERATE_SLUG_FROM_TITLE = true;
 export const TRANSITION_API = true;

@@ -1,7 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import TabTitleChange from "../components/TabTitleChange.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config";
@@ -18,8 +18,8 @@ const {
 <html lang="en" data-theme="dracula" class="dark">
   <head>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <BaseHead title={title} description={description} image={image} , ogType={ogType} />
-    {TRANSITION_API && <ViewTransitions />}
+    <BaseHead title={title} description={description} image={image} ogType={ogType} />
+    {TRANSITION_API && <ClientRouter />}
   </head>
   <body class="font-code">
     <TabTitleChange /> 
